@@ -91,6 +91,9 @@ class Calculator_class {
       console.log(`Total : ${calculator_instance.get_current_calculation_result()}`);
 
       // Get the operation to perform from the User
+      // ----------------------------------------------------
+      // this while loop will continue to ask the user to enter,
+      // TIP** keep pressing 'q' until it quits
       while (current_operation !== "Q") {
       current_operation = prompt("Enter the math operation to be performed (ADD)")
           .toUpperCase();
