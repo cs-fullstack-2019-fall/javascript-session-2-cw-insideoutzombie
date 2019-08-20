@@ -56,11 +56,22 @@ class Calculator_class {
     // Multiplies the 2 numbers passed in and returns the result
     // It also updates the running total property
     // TODO: Student implement the method for multiplication
-   
+    // Multiplies the 2 numbers passed in and returns the result
+    // It also updates the running total property
+    multiply(first_number, second_number) {
+        this.update_current_calculation_result(first_number * second_number);
+        return this.current_calculation_result;
+    };
+
     // Divides the 2 numbers passed in and returns the result
     // It also updates the running total property
     // TODO: Student implement the method for division
-
+    // Divides the 2 numbers passed in and returns the result
+    // It also updates the running total property
+    divide(first_number, second_number) {
+        this.update_current_calculation_result(first_number / second_number);
+        return this.current_calculation_result;
+    };
 }
 
 // END CLASS DEFINITION
@@ -92,6 +103,12 @@ function main() {
     switch (current_operation) {
         case "ADD":
             alert(`New sum Total : ${calculator_instance.add(first_int, second_int)}`);
+        case "SUB":
+            alert(`New sum Total : ${calculator_instance.subtract(first_int, second_int)}`);
+        case "MULT":
+            alert(`New sum Total : ${calculator_instance.multiply(first_int, second_int)}`);
+        case "DIV":
+            alert(`New sum Total : ${calculator_instance.divide(first_int, second_int)}`);
     }
     // Print the final calculation total in console for debugging purposes
     console.log(`Final Total : ${calculator_instance.get_current_calculation_result()}`);
