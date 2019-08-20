@@ -81,38 +81,41 @@ class Calculator_class {
 // POE Main execution path (execution starts here)
 //
 /********************************************************************************/
-function main() {
-    let calculator_instance = new Calculator_class(); // Get a new calculator instance
-    let current_operation = "ADD";
+  function main() {
+      let calculator_instance = new Calculator_class(); // Get a new calculator instance
+      let current_operation = "ADD";
 
-    // TODO: Student implement functionality to keep asking the User for next math operation
-    //  until they enter 'x' to exit
-    // Start by just displaying the current total
-    console.log(`Total : ${calculator_instance.get_current_calculation_result()}`);
+      // TODO: Student implement functionality to keep asking the User for next math operation
+      //  until they enter 'x' to exit
+      // Start by just displaying twhile (current_operation !== "q") {he current total
+      console.log(`Total : ${calculator_instance.get_current_calculation_result()}`);
 
-    // Get the operation to perform from the User
-    current_operation = prompt("Enter the math operation to be performed (ADD)")
-        .toUpperCase();
+      // Get the operation to perform from the User
+      while (current_operation !== "Q") {
+      current_operation = prompt("Enter the math operation to be performed (ADD)")
+          .toUpperCase();
 
-    // Get the 2 numbers for the operation
-    let first_int = parseInt(prompt(`Enter the 1st number for ${current_operation}`));
-    let second_int = parseInt(prompt(`Enter the 2nd number for ${current_operation}`));
+      // Get the 2 numbers for the operation
+      let first_int = parseInt(prompt(`Enter the 1st number for ${current_operation}`));
+      let second_int = parseInt(prompt(`Enter the 2nd number for ${current_operation}`));
 
-    // Perform the operation and display the results
-    // TODO: Student to implement support for CLR (clear), SUB (subtract), MULT (multiply), and DIV (division Calculator methods
-    switch (current_operation) {
-        case "ADD":
-            alert(`New sum Total : ${calculator_instance.add(first_int, second_int)}`);
-        case "SUB":
-            alert(`New sum Total : ${calculator_instance.subtract(first_int, second_int)}`);
-        case "MULT":
-            alert(`New sum Total : ${calculator_instance.multiply(first_int, second_int)}`);
-        case "DIV":
-            alert(`New sum Total : ${calculator_instance.divide(first_int, second_int)}`);
+      // Perform the operation and display the results
+      // TODO: Student to implement support for CLR (clear), SUB (subtract), MULT (multiply), and DIV (division Calculator methods
+      switch (current_operation) {
+          case "ADD":
+              alert(`New sum Total : ${calculator_instance.add(first_int, second_int)}`);
+          case "SUB":
+              alert(`New sum Total : ${calculator_instance.subtract(first_int, second_int)}`);
+          case "MULT":
+              alert(`New sum Total : ${calculator_instance.multiply(first_int, second_int)}`);
+          case "DIV":
+              alert(`New sum Total : ${calculator_instance.divide(first_int, second_int)}`);
+      }
+      // Print the final calculation total in console for debugging purposes
+      console.log(`Final Total : ${calculator_instance.get_current_calculation_result()}`);
     }
-    // Print the final calculation total in console for debugging purposes
-    console.log(`Final Total : ${calculator_instance.get_current_calculation_result()}`);
-}
+  }
+
 
 // Call Main function to start things up!
 main();
