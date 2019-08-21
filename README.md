@@ -1,5 +1,7 @@
 # Half session JavaScript project
 
+See script.js for comments. Score : 1 point
+
 ## Enhancing Existing Applications - Session 4
 
 For this mini-project you are provided a mostly working application. A simple console version of a Calculator is already provided in this git repository.

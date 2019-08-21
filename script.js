@@ -95,8 +95,10 @@ class Calculator_class {
       // this while loop will continue to ask the user to enter,
       // TIP** keep pressing 'q' until it quits
       while (current_operation !== "Q") {
+        // NOTE : 'x' to quit NOT 'Q' to quit. Follow directions. 
       current_operation = prompt("Enter the math operation to be performed (ADD)")
           .toUpperCase();
+          // NOTE : your prompt should give the user 6 choices NOT 1
 
       // Get the 2 numbers for the operation
       let first_int = parseInt(prompt(`Enter the 1st number for ${current_operation}`));
@@ -107,12 +109,17 @@ class Calculator_class {
       switch (current_operation) {
           case "ADD":
               alert(`New sum Total : ${calculator_instance.add(first_int, second_int)}`);
+              // NOTE : break after a case unless you want it to fall though
           case "SUB":
               alert(`New sum Total : ${calculator_instance.subtract(first_int, second_int)}`);
+              // NOTE : break after a case unless you want it to fall though
           case "MULT":
               alert(`New sum Total : ${calculator_instance.multiply(first_int, second_int)}`);
+              // NOTE : break after a case unless you want it to fall though
           case "DIV":
               alert(`New sum Total : ${calculator_instance.divide(first_int, second_int)}`);
+              // NOTE : break after a case unless you want it to fall though
+          // NOTE : no functinality for CLR    
       }
       // Print the final calculation total in console for debugging purposes
       console.log(`Final Total : ${calculator_instance.get_current_calculation_result()}`);
